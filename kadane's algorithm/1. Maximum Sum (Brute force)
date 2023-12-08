@@ -1,0 +1,24 @@
+"""
+for a given array, find the maximum sum of sub array
+Subarray means a contiguous array
+"""
+
+array = [-4, -1, -2, -7, -3, -4]
+maxSum = array[0]
+for i in range(len(array)):
+    curSum = 0
+    for j in range(i, len(array)):
+        curSum = curSum+array[j]
+        maxSum = max(curSum, maxSum)
+print(maxSum)
+
+"""
+output: -1
+because it is the maximum sum of a sub array
+
+if array = [-4, -1, -2, -7, 3, 4]
+then output = 7
+because array [3,4] will be the array with maximum sum
+"""
+
+
